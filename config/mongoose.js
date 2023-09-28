@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://Pranali:ucsAdLmhDjhdgu22@cluster0.lqn3xio.mongodb.net/?retryWrites=true&w=majority');
-//mongoose.connect(process.env.mongooseUrl);
+require('dotenv').config();
+mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'Error Connecting to Database!'));
