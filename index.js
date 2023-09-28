@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const productRoutes = require('./routes/productRoutes');
 const config = require('./config/mongoose'); 
-
 const app = express();
 
 // Body parser middleware
